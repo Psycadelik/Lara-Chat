@@ -39,10 +39,18 @@ const app = new Vue({
         
             addMessage(message) {
                 //Add to existing messages
-                    this.messages.push(message)
+                    this.messages.push(message);
                 //Persist to existing messages
                 //console.log('message added');
             }
         
+    },
+
+    created() {
+    
+        axios.get('/messages').then(response => {
+            this.message = response.data;
+        });
+
     }
 });
