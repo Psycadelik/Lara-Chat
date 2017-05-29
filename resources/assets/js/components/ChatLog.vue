@@ -18,4 +18,9 @@
 {
     background-color: #ccc;
 }
+
+.empty{
+    padding: 1rem;
+    text-align: center;
+}
 </style>
